@@ -1,6 +1,10 @@
 Noteworthy Changes in ssocr Releases
 ====================================
 
+Version ?.??.? (????-??-??):
+----------------------------
+ * Fix one debug message to be printed only with -P, --debug-output
+
 Version 2.25.0 (2025-03-23):
 ----------------------------
  * New option -F, --adapt-after-crop to skip threshold adjustment directly

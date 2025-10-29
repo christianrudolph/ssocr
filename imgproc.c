@@ -471,7 +471,8 @@ double adapt_threshold(Imlib_Image *image, double thresh, luminance_t lt,
   double t = thresh;
   static int is_adapted = 0;
   if(is_adapted && !force_update) {
-    fprintf(stderr, "threshold is already adjusted to image\n");
+    if(flags & DEBUG_OUTPUT)
+      fprintf(stderr, "threshold is already adjusted to image\n");
   } else if(!(flags & ABSOLUTE_THRESHOLD)) {
     if(flags & DEBUG_OUTPUT)
       fprintf(stderr, "adjusting threshold to image: %f ->", t);
