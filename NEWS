@@ -1,7 +1,7 @@
 Noteworthy Changes in ssocr Releases
 ====================================
 
-Version ?.??.? (????-??-??):
+Version 2.25.1 (2025-10-31):
 ----------------------------
  * Fix one debug message to be printed only with -P, --debug-output
 
