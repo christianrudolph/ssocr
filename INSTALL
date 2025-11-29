@@ -73,13 +73,13 @@ Platform Specifics
       pkg-config
   - Finish the Cygwin installation.
   - Open the Windows System Properties. Open the "Advanced" tab and click on "Environment Variables".
-  - Select "Path" at "User variables" and click "Edit". Click "New" and enter "C:\cygwin64\bin" (or whatever directory you've installed Cygwin in). Close the menu.
+  - Select "Path" at "User variables" and click "Edit". Click "New" and enter "C:\cygwin64\bin" (or whatever directory you've installed Cygwin in). 
   -Start Cygwin and execute the following commands:
       export PKG_CONFIG_PATH=/usr/lib/pkgconfig/
       export PKG_CONFIG_PATH=/usr/local/lib/
   - Download the ssocr source code. In Cygwin, go to the downloaded directory:
       cd /cygdrive/c/Users/Chris/Downloads/ssocr
-  - To compile the sources. Execute:
+  - To compile the sources, execute:
       make
   - You now have generated an executable file. Press "Win"-"R" and execute e.g. "ssocr -T yourImage.png" to run the program.
 
