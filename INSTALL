@@ -58,11 +58,32 @@ Platform Specifics
 ------------------
 - I am testing on GNU/Linux only
 - I am testing with GCC only
-- On Windows, you may need to rename the binary from ssocr to ssocr.exe
 - On macOS, you may need to specify the X11 include path manually.
   The following have been reported as working on macOS at some time:
   - make CPPFLAGS=-I/opt/X11/include
   - make CPPFLAGS=-I/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Tk.framework/Versions/8.5/Headers/
+
+  Step-by-Step Instructions for Windows Users:
+  --------------------------------------------
+  - Download and install Cygwin. At step "Select Packages" select "Full" in the "View" drop-down and search for the following packages. In the "New" column change "Skip" to the most recent version (not dev/test/..) of the following packages:
+      gcc-core
+      imlib2
+      libmaus2
+      make
+      pkg-config
+  - Finish the Cygwin installation.
+  - Open the Windows System Properties. Open the "Advanced" tab and click on "Environment Variables".
+  - Select "Path" at "User variables" and click "Edit". Click "New" and enter "C:\cygwin64\bin" (or whatever directory you've Cygwin installed in). Close the menu.
+  - Start Cygwin.
+  - Execute the following commands:
+      export PKG_CONFIG_PATH=/usr/lib/pkgconfig/
+      export PKG_CONFIG_PATH=/usr/local/lib/
+  - Download the ssocr source code. In Cygwin, go to the downloaded directory:
+      cd /cygdrive/c/Users/Chris/Downloads/ssocr
+  - To generate an executable exe-file (i.e. compile the sources) execute:
+      make
+  - Win-R and execute e.g. "ssocr -T yourImage.png" to run the program.
+
 
 C Compiler Problems:
 --------------------
