@@ -65,7 +65,7 @@ Platform Specifics
 
   Step-by-Step Instructions for Windows Users:
   --------------------------------------------
-  - Download and install Cygwin. At step "Select Packages" select "Full" in the "View" drop-down and search for the following packages. In the "New" column change "Skip" to the most recent version (not dev/test/..) of the following packages:
+  - Download and install Cygwin. At step "Select Packages" select "Full" in the "View" drop-down menu and search for the following packages. In the "New" column change "Skip" to the most recent version (not dev/test/..) for these packages.
       gcc-core
       imlib2
       libmaus2
@@ -73,16 +73,15 @@ Platform Specifics
       pkg-config
   - Finish the Cygwin installation.
   - Open the Windows System Properties. Open the "Advanced" tab and click on "Environment Variables".
-  - Select "Path" at "User variables" and click "Edit". Click "New" and enter "C:\cygwin64\bin" (or whatever directory you've Cygwin installed in). Close the menu.
-  - Start Cygwin.
-  - Execute the following commands:
+  - Select "Path" at "User variables" and click "Edit". Click "New" and enter "C:\cygwin64\bin" (or whatever directory you've installed Cygwin in). Close the menu.
+  -Start Cygwin and execute the following commands:
       export PKG_CONFIG_PATH=/usr/lib/pkgconfig/
       export PKG_CONFIG_PATH=/usr/local/lib/
   - Download the ssocr source code. In Cygwin, go to the downloaded directory:
       cd /cygdrive/c/Users/Chris/Downloads/ssocr
-  - To generate an executable exe-file (i.e. compile the sources) execute:
+  - To compile the sources. Execute:
       make
-  - Win-R and execute e.g. "ssocr -T yourImage.png" to run the program.
+  - You now have generated an executable file. Press "Win"-"R" and execute e.g. "ssocr -T yourImage.png" to run the program.
 
 
 C Compiler Problems:
